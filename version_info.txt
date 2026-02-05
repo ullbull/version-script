@@ -4,5 +4,5 @@
 # The tag "dirty" is added if you have any uncommitted changes when running the version script.
 
 VERSION_MAJOR=1
-VERSION_MINOR=0
+VERSION_MINOR=1
 PRERELEASE_TAG=beta
