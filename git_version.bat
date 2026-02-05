@@ -44,8 +44,8 @@ echo // You can set the first two version integers ^(major and minor^) and an op
 echo // The third version integer ^(patch^) is generated automatically from the number of commits since the file "!CONFIG_FILE!" was edited.
 echo // The tag "!TAG_DIRTY!" is added if you have any uncommitted changes when running the version script.
 echo.
-echo #define VERSION_MINOR %VERSION_MINOR%
 echo #define VERSION_MAJOR %VERSION_MAJOR%
+echo #define VERSION_MINOR %VERSION_MINOR%
 echo #define VERSION_PATCH %VERSION_PATCH%
 echo #define GIT_HASH "!GIT_HASH!"
 echo #define VERSION "!VERSION!"
