@@ -22,7 +22,9 @@ for /f "usebackq" %%L in (`git log -1 --format^=%%H -- !CONFIG_FILE_FULL_PATH!`)
 REM Count commits since that commit, ignoring merges
 for /f "usebackq" %%C in (`git rev-list --count --no-merges %LAST_COMMIT%..HEAD`) do set VERSION_PATCH=%%C
 
-set GIT_HASH=afsr2f32rf
+REM Get the short hash of the latest commit in the repository
+for /f %%H in ('git rev-parse --short HEAD') do set GIT_HASH=%%H
+
 set TAG_DIRTY=dirty
 
 set VERSION=!VERSION_MAJOR!.!VERSION_MINOR!.!VERSION_PATCH!
