@@ -16,8 +16,6 @@ for /f "usebackq delims= eol=#" %%x in ("%CONFIG_FILE_FULL_PATH%") do (
     set "%%x"
 )
 
-echo !VERSION_MAJOR!
-
 set VERSION_PATCH=5
 set GIT_HASH=afsr2f32rf
 set TAG_DIRTY=dirty
