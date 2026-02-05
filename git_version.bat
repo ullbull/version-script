@@ -16,7 +16,13 @@ for /f "usebackq delims= eol=#" %%x in ("%CONFIG_FILE_FULL_PATH%") do (
     set "%%x"
 )
 
-set VERSION_PATCH=5
+set FILE=CONFIG_FILE_FULL_PATH
+REM Get the last commit that touched the version file
+for /f "usebackq" %%L in (`git log -1 --format^=%%H -- "%FILE%"`) do set LAST_COMMIT=%%L
+
+REM Count commits since that commit, ignoring merges
+for /f "usebackq" %%C in (`git rev-list --count --no-merges %LAST_COMMIT%..HEAD`) do set VERSION_PATCH=%%C
+
 set GIT_HASH=afsr2f32rf
 set TAG_DIRTY=dirty
 
