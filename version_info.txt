@@ -1,0 +1,8 @@
+# Edit this file to change version.
+# You can set the first two version integers VERSION_MAJOR and VERSION_MINOR and an optional PRERELEASE_TAG.
+# The third version integer is generated automatically from the number of commits since this file was edited.
+# The tag "dirty" is added if you have any uncommitted changes when running the version script.
+
+VERSION_MAJOR=1
+VERSION_MINOR=0
+PRERELEASE_TAG=beta
